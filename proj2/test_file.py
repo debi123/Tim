@@ -4,12 +4,12 @@ import subprocess
 
 
 
-def analyze_hbase():
-    """Checking the number of records in hbase table"""
-    hbase_count = 0
-    hbase_count = int(subprocess.check_output("hbase shell ./hbase_cmd.txt | tail -2 | sed \'/^$/d\' | awk \'{print $1}\'", shell=True, universal_newlines=True).strip())
+# def analyze_hbase():
+#     """Checking the number of records in hbase table"""
+#     hbase_count = 0
+#     hbase_count = int(subprocess.check_output("hbase shell ./hbase_cmd.txt | tail -2 | sed \'/^$/d\' | awk \'{print $1}\'", shell=True, universal_newlines=True).strip())
 
-    return(hbase_count)
+#     return(hbase_count)
 
 
 
@@ -54,9 +54,9 @@ class TextAnalysisTests(unittest.TestCase):
         """Basic smoke test: does the function run."""
         analyze_text(self.filename)
 
-    def test_line_count(self):
-        """Check that the line count is correct."""
-        self.assertEqual(analyze_text(self.filename)[0], analyze_hbase())
+#     def test_line_count(self):
+#         """Check that the line count is correct."""
+#         self.assertEqual(analyze_text(self.filename)[0], analyze_hbase())
 
 
     def test_no_such_file(self):
