@@ -7,8 +7,8 @@ import subprocess
 def analyze_hbase():
     """Checking the number of records in hbase table"""
     hbase_count = 0
-#     hbase_count = int(subprocess.check_output("hbase shell ./hbase_cmd.txt | tail -2 | sed \'/^$/d\' | awk \'{print $1}\'", shell=True, universal_newlines=True).strip())
-    hbase_count = subprocess.check_output("hbase shell ./hbase_cmd.txt")
+    hbase_count = int(subprocess.check_output("hbase shell ./hbase_cmd.txt | tail -2 | sed \'/^$/d\' | awk \'{print $1}\'", shell=True, universal_newlines=True).strip())
+#     hbase_count = subprocess.check_output("hbase shell ./hbase_cmd.txt")
     print(hbase_count)
     return(hbase_count)                                          
 analyze_hbase()
