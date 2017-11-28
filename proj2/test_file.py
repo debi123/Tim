@@ -62,7 +62,7 @@ class TextAnalysisTests(unittest.TestCase):
     def test_no_such_file(self):
         """Check the proper exception is thrown for a missing file."""
         with self.assertRaises(IOError):
-            analyze_text('trial.csv')
+            analyze_text('resource-tutorial/proj2/trial.csv')
 
     def test_no_deletion(self):
         """Check that the function doesn't delete the input file."""
