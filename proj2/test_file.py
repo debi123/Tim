@@ -67,7 +67,7 @@ class TextAnalysisTests(unittest.TestCase):
     def test_no_deletion(self):
         """Check that the function doesn't delete the input file."""
         analyze_text(self.filename)
-        self.assertTrue(os.path.exists(self.f))
+        self.assertTrue(os.path.exists('./trial.csv))
 
 
 if __name__ == '__main__':
