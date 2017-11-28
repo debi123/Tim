@@ -54,9 +54,9 @@ class TextAnalysisTests(unittest.TestCase):
         """Basic smoke test: does the function run."""
         analyze_text(self.filename)
 
-#     def test_line_count(self):
-#         """Check that the line count is correct."""
-#         self.assertEqual(analyze_text(self.filename)[0], analyze_hbase())
+    def test_line_count(self):
+        """Check that the line count is correct."""
+        self.assertEqual(analyze_text(self.filename)[0], 2)
 
 
     def test_no_such_file(self):
