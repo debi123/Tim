@@ -39,7 +39,7 @@ class TextAnalysisTests(unittest.TestCase):
 
     def setUp(self):
         """Fixture that creates a file for the text methods to use."""
-        self.filename = 'resource-tutorial/proj2/trial.csv'
+        self.filename = './trial.csv'
         f = open(self.filename, 'r')
 
 
